@@ -21,7 +21,7 @@ Due to size limitations on GitHub, some larger project files are stored separate
 - **models folder**: Contains trained machine learning models
 - **data folder**: Contains the dataset used for this project
 
-These resources can be found in our Google Drive folder. Please contact the project maintainers for access to these files.
+These resources can be found in our Google Drive folder.
 
 To use these resources:
 
