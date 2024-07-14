@@ -26,7 +26,7 @@ These resources can be found in our Google Drive folder. Please contact the proj
 To use these resources:
 
 1. Download the 'models' and 'data' folders from the provided Google Drive link.
-   Link: 
+   Link: https://drive.google.com/drive/folders/1xLQ_kKhFmsJlCY1j2-Fdlm-G98-yEgSL?usp=sharing
 2. Place these folders in the root directory of the project, alongside the other folders and files.
 
 This will ensure that all scripts and applications can access the necessary data and models.
