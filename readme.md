@@ -37,8 +37,7 @@ This will ensure that all scripts and applications can access the necessary data
 
 ## Project Overview
 
-This project aims to provide comprehensive insights from the IBRD loans and credits dataset through a user-friendly web application. The application leverages both CPU and GPU processing to efficiently handle large datasets and perform complex analyses. This Project has two parts one which runs solely on the cpu for device compatility across all devices which utilises parallel processing for scalability and the other part runs the preprocessing on the cuda suppoerted GPU's
-using RAPIDS libraries for gpu accelerated computing.
+This project aims to provide comprehensive insights from the IBRD loans and credits dataset through a user-friendly web application. The application leverages both CPU and GPU processing to efficiently handle large datasets and perform complex analyses. This Project has two parts one which runs solely on the cpu for device compatility across all devices which utilises parallel processing for scalability and the other part runs the preprocessing on the cuda suppoerted GPU's using RAPIDS libraries for gpu accelerated computing. After uploading dataset, preprocessing is performed. Knowledge of dataset is represented in form of visualizations. Insights are generated after identifying pattern with integration of Gemini 1.5 Pro LLM.
 Source of the dataset: https://finances.worldbank.org/Loans-and-Credits/IBRD-Statement-Of-Loans-Historical-Data/zucq-nrc3/about_data
 
 ## Features
