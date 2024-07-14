@@ -65,7 +65,7 @@ Source of the dataset: https://finances.worldbank.org/Loans-and-Credits/IBRD-Sta
 
 - RAM: Minimum 16 GB
 - Processor: Intel i5/i7 or AMD Ryzen 5/7 (or equivalent)
-- Operating System: Linux only (WSL supported)
+- Operating System: Linux only (WSL not supported)
 - Disk Space: Minimum 7GB
 - GPU: NVIDIA GPU with CUDA support (version 11.8 or above)
 - VRAM: Minimum 4GB
