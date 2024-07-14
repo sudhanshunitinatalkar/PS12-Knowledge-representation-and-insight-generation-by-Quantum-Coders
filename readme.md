@@ -14,6 +14,24 @@ We are Quantum Coders, Team Leader **Krushna Mohod** and Team Member **Sudhanshu
 5. [Project Structure](#project-structure)
 6. [Acknowledgements](#acknowledgements)
 
+## Additional Resources
+
+Due to size limitations on GitHub, some larger project files are stored separately. These include:
+
+- **models folder**: Contains trained machine learning models
+- **data folder**: Contains the dataset used for this project
+
+These resources can be found in our Google Drive folder. Please contact the project maintainers for access to these files.
+
+To use these resources:
+
+1. Download the 'models' and 'data' folders from the provided Google Drive link.
+   Link: 
+2. Place these folders in the root directory of the project, alongside the other folders and files.
+
+This will ensure that all scripts and applications can access the necessary data and models.
+
+
 ## Project Overview
 
 This project aims to provide comprehensive insights from the IBRD loans and credits dataset through a user-friendly web application. The application leverages both CPU and GPU processing to efficiently handle large datasets and perform complex analyses. This Project has two parts one which runs solely on the cpu for device compatility across all devices which utilises parallel processing for scalability and the other part runs the preprocessing on the cuda suppoerted GPU's
@@ -28,6 +46,7 @@ Source of the dataset: https://finances.worldbank.org/Loans-and-Credits/IBRD-Sta
 - Interactive visualizations
 - Insights generation using machine learning models
 - Web interface built with Flask
+
 
 
 ## Installation
@@ -54,8 +73,8 @@ Source of the dataset: https://finances.worldbank.org/Loans-and-Credits/IBRD-Sta
 1. **Clone the repository:**
 
     ```
-    git clone https://gitlab.com/quantum-coders1/ps-12-knowledge-representation-and-insight-generation.git
-    cd ps-12-knowledge-representation-and-insight-generation
+    git clone https://github.com/sudhanshunitinatalkar/PS12-Knowledge-representation-and-insight-generation-by-Quantum-Coders.git
+    cd PS12-Knowledge-representation-and-insight-generation-by-Quantum-Coders
     ```
 
 2. **Set up RAPIDS environment:**`
@@ -85,8 +104,8 @@ Source of the dataset: https://finances.worldbank.org/Loans-and-Credits/IBRD-Sta
 1. **Clone the repository:**
 
     ```
-    git clone https://gitlab.com/quantum-coders1/ps-12-knowledge-representation-and-insight-generation.git
-    cd ps-12-knowledge-representation-and-insight-generation
+    git clone https://github.com/sudhanshunitinatalkar/PS12-Knowledge-representation-and-insight-generation-by-Quantum-Coders.git
+    cd PS12-Knowledge-representation-and-insight-generation-by-Quantum-Coders
     ```
 
 2. **Install the required packages:**
