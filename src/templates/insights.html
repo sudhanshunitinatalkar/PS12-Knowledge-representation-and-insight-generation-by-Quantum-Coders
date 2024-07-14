@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowledgeInsight Hub - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> KnowledgeInsight Hub</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <button id="menu-toggle" class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="{{ url_for('explore') }}"><i class="fas fa-compass"></i> Explore</a></li>
+                <li><a href="{{ url_for('visualize') }}"><i class="fas fa-chart-bar"></i> Visualize</a></li>
+                <li><a href="{{ url_for('insights') }}" class="active"><i class="fas fa-lightbulb"></i> Insights</a></li>
+                <li><a href="{{ url_for('about') }}"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="{{ url_for('contact') }}"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <h2>Generate Insights</h2>
+            <div id="warning-message" class="warning">
+                <p><strong>Warning:</strong> Leaving this page during processing will result in data loss. Please stay on this page until processing is complete.</p>
+            </div>
+            <div id="upload-section">
+                <form id="file-upload-form" method="post" enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+                    {{ form.file.label }} {{ form.file() }}
+                    {% if form.file.errors %}
+                        <ul class="errors">
+                            {% for error in form.file.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {{ form.submit(class="btn btn-primary") }}
+                </form>
+            </div>
+            <div id="success-message" style="display: none;"></div>
+            <div id="error-message" style="display: none;"></div>
+            <div id="report-section" style="display: none;">
+                <h3>Data Report</h3>
+                <div id="report-content">
+                    <h4>Before Processing</h4>
+                    <div id="before-text"></div>
+                    <br>
+                    <br>
+                    <h4>After Processing</h4>
+                    <div id="after-text"></div>
+                </div>
+            </div>
+            <div id="loader" class="loader" style="display: none;"></div>
+            <button id="generate-report-btn" style="display: none;">Generate Report</button>
+            <div id="generated-report-section" style="display: none;">
+                <h3>Generated Report</h3>
+                <div id="generated-report-content"></div>
+                <div id="report-images"></div>
+                <button id="print-report-btn">Print Report</button>
+            </div>
+            
+            <!-- Chatbox Section -->
+            <div id="chatbox-section" style="display: none;">
+                <h2>Ask Query about the Insights</h2>
+                <div id="chatbox"></div>
+                <form id="query-form">
+                    <input type="text" id="query-input" placeholder="Type your message..." />
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="{{ url_for('explore') }}"><i class="fas fa-compass"></i> Explore</a></li>
+                        <li><a href="{{ url_for('visualize') }}"><i class="fas fa-chart-bar"></i> Visualize</a></li>
+                        <li><a href="{{ url_for('insights') }}"><i class="fas fa-lightbulb"></i> Insights</a></li>
+                        <li><a href="{{ url_for('about') }}"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Reach out our repository</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/krushnamohod/QuantumCoders"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <section class="contact-details">
+                    <h3>Our Contact Details</h3>
+                    <div class="social-icons">
+                        <ul><h4>Krushna Mohod</h4>
+                            <a href="https://github.com/krushnamohod"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/krushna-mohod-5076a128a/"><i class="fab fa-linkedin"></i></a>
+                            <h4>Sudhanshu Atalkar</h4>
+                            <a href="https://github.com/sudhanshunitinatalkar"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sudhanshu-atalkar/"><i class="fab fa-linkedin"></i></a>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/insights.js') }}"></script>
+</body>
+</html>

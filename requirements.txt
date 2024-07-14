@@ -1,0 +1,13 @@
+google-generativeai
+python-dotenv
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+seaborn
+joblib
+flask
+flask-wtf
+werkzeug
+python-dateutil

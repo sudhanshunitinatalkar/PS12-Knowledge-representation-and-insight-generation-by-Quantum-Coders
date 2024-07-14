@@ -1,0 +1,89 @@
+Target: loan duration (days)
+Task: regression
+Random Forest MSE: 0.007598978615114342
+Random Forest R2 Score: 0.9999999997444287
+Number of features used: 53
+Top 10 important features:
+  loan duration (years): 0.993483463411209
+  loan duration (months): 0.006516528969874282
+  agreement signing date: 7.037594827270565e-09
+  board approval date: 1.6920916895126154e-10
+  last repayment date: 4.349565992612938e-11
+  first repayment date: 4.325090315282301e-11
+  original principal amount: 3.81251141201202e-11
+  repaid 3rd party: 3.725494687893865e-11
+  closed date (most recent): 3.665841531100356e-11
+  country code: 3.54029356750378e-11
+--------------------------------------------------
+Target: interest rate
+Task: regression
+Random Forest MSE: 0.4323410070297146
+Random Forest R2 Score: 0.9616688133463656
+Number of features used: 53
+Top 10 important features:
+  loan duration (years): 0.441030171411926
+  loan duration (months): 0.11435219788577987
+  loan type_SCL: 0.09036601536488317
+  loan type_POOL LOAN: 0.07412865147459585
+  closed date (most recent): 0.04911778619800652
+  loan type_FSL: 0.02144134232112639
+  repaid to ibrd: 0.020249427159070188
+  loan type_SNGL CRNCY: 0.017141777133826645
+  last repayment date: 0.015086136650094594
+  loan type_SCP USD: 0.014693516307520303
+--------------------------------------------------
+Target: disbursed amount
+Task: regression
+Random Forest MSE: 19624660063.960472
+Random Forest R2 Score: 0.9999935485495602
+Number of features used: 53
+Top 10 important features:
+  original principal amount: 0.6434546743492503
+  repaid to ibrd: 0.20765208650058137
+  due to ibrd: 0.13684505903977937
+  cancelled amount: 0.004107421171099934
+  loans held: 0.002911908933071164
+  repaid 3rd party: 0.0011898218501048637
+  borrower's obligation: 0.0011542591291146401
+  loan duration (months): 0.0005753108353956559
+  sold 3rd party: 0.00040967111787136226
+  loan duration (years): 0.00037866000859050386
+--------------------------------------------------
+Target: loan status
+Task: classification
+Random Forest Accuracy: 0.9926115854338291
+Random Forest Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         5
+           1       0.99      0.99      0.99      2165
+           2       0.97      0.99      0.98     16594
+           3       0.99      1.00      0.99     16641
+           4       0.98      0.97      0.97      2515
+           5       0.97      0.94      0.95       652
+           6       1.00      0.99      0.99      3319
+           7       0.99      0.97      0.98      5024
+           8       1.00      0.99      1.00    115351
+           9       1.00      0.99      1.00      3916
+          10       0.99      1.00      0.99     74150
+          11       0.99      0.98      0.99     18830
+          12       0.96      0.98      0.97       896
+          13       1.00      1.00      1.00        79
+
+    accuracy                           0.99    260137
+   macro avg       0.92      0.91      0.91    260137
+weighted avg       0.99      0.99      0.99    260137
+
+Number of features used: 53
+Top 10 important features:
+  loan duration (years): 0.12432367248488918
+  loan duration (months): 0.10869246989538521
+  repaid to ibrd: 0.07244960824152825
+  borrower's obligation: 0.06763679720809232
+  loans held: 0.04717249585560454
+  due to ibrd: 0.04458657004911453
+  loan type_NON POOL: 0.042130048832683675
+  undisbursed amount: 0.039972751324688256
+  loan type_POOL LOAN: 0.0394020172820052
+  closed date (most recent): 0.03513169985340112
+--------------------------------------------------
